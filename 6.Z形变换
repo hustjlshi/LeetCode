@@ -1,0 +1,19 @@
+class Solution {
+public:
+    string convert(string s, int numRows) {
+        string ans;
+        int node=numRows*2-2;
+        int len=s.size();
+        if(len==0||numRows==1||numRows==0)
+            return s;
+        for(int i=0;i<numRows;i++){
+            for(int j=i;j<len;j=j+node){
+                ans.push_back(s[j]);
+                if(i!=0&&i!=numRows-1&&j+node-2*i<len){
+                    ans.push_back(s[j+node-2*i]);
+                }
+            }
+        }
+        return ans;
+    }
+};
