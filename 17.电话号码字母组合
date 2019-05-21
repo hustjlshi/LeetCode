@@ -1,0 +1,102 @@
+class Solution {
+public:
+    void  fb(vector<string> &ans,string &tem,int i,string digits){
+        if(i==digits.size()){
+            ans.push_back(tem);
+        }
+        if(digits[i]=='2'){
+            string tem1=tem;
+            string tem2=tem;
+            tem.push_back('a');
+            fb(ans,tem,i+1,digits);
+            tem1.push_back('b');
+            fb(ans,tem1,i+1,digits);
+            tem2.push_back('c');
+            fb(ans,tem2,i+1,digits);
+        }
+        if(digits[i]=='3'){
+            string tem1=tem;
+            string tem2=tem;
+            tem.push_back('d');
+            fb(ans,tem,i+1,digits);
+            tem1.push_back('e');
+            fb(ans,tem1,i+1,digits);
+            tem2.push_back('f');
+            fb(ans,tem2,i+1,digits);
+        }
+        if(digits[i]=='4'){
+            string tem1=tem;
+            string tem2=tem;
+            tem.push_back('g');
+            fb(ans,tem,i+1,digits);
+            tem1.push_back('h');
+            fb(ans,tem1,i+1,digits);
+            tem2.push_back('i');
+            fb(ans,tem2,i+1,digits);
+        }
+        if(digits[i]=='5'){
+            string tem1=tem;
+            string tem2=tem;
+            tem.push_back('j');
+            fb(ans,tem,i+1,digits);
+            tem1.push_back('k');
+            fb(ans,tem1,i+1,digits);
+            tem2.push_back('l');
+            fb(ans,tem2,i+1,digits);
+        }
+        if(digits[i]=='6'){
+            string tem1=tem;
+            string tem2=tem;
+            tem.push_back('m');
+            fb(ans,tem,i+1,digits);
+            tem1.push_back('n');
+            fb(ans,tem1,i+1,digits);
+            tem2.push_back('o');
+            fb(ans,tem2,i+1,digits);
+        }
+        if(digits[i]=='7'){
+            string tem1=tem;
+            string tem2=tem;
+            string tem3=tem;
+            tem.push_back('p');
+            fb(ans,tem,i+1,digits);
+            tem1.push_back('q');
+            fb(ans,tem1,i+1,digits);
+            tem2.push_back('r');
+            fb(ans,tem2,i+1,digits);
+            tem3.push_back('s');
+            fb(ans,tem3,i+1,digits);
+        }
+        if(digits[i]=='8'){
+            string tem1=tem;
+            string tem2=tem;
+            tem.push_back('t');
+            fb(ans,tem,i+1,digits);
+            tem1.push_back('u');
+            fb(ans,tem1,i+1,digits);
+            tem2.push_back('v');
+            fb(ans,tem2,i+1,digits);
+        }
+        if(digits[i]=='9'){
+            string tem1=tem;
+            string tem2=tem;
+            string tem3=tem;
+            tem.push_back('w');
+            fb(ans,tem,i+1,digits);
+            tem1.push_back('x');
+            fb(ans,tem1,i+1,digits);
+            tem2.push_back('y');
+            fb(ans,tem2,i+1,digits);
+            tem3.push_back('z');
+            fb(ans,tem3,i+1,digits);
+        }
+    }
+    vector<string> letterCombinations(string digits) {
+        vector<string> ans;
+        if(digits.size()==0)
+            return ans;
+        string tem;
+        fb(ans,tem,0,digits);
+        return ans;
+    }
+};
